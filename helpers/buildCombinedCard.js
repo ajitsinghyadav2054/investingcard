@@ -120,7 +120,7 @@ function buildCombinedCard(macroData, levelsData, eventsData) {
                 type: "ColumnSet",
                 columns: [
                     { type: "Column", width: "stretch", items: [{ type: "TextBlock", text: "📈 Consolidated Macro Brief", size: "Large", weight: "Bolder" }] },
-                    { type: "Column", width: "auto", items: [{ type: "TextBlock", text: `${dateStr}  |  08:20 GMT`, size: "Small", isSubtle: true, horizontalAlignment: "Right" }] }
+                    { type: "Column", width: "auto", items: [{ type: "TextBlock", text: `${dateStr}  |  08:00 BST`, size: "Small", isSubtle: true, horizontalAlignment: "Right" }] }
                 ]
             },
 

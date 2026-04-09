@@ -33,10 +33,10 @@ async function fetchDailyLevels() {
     const token = process.env.OHLC_API_TOKEN; // Reusing the same master API token
     const dailyApiBase = process.env.DAILY_MARKET_API_BASE || "https://qh-api.corp.hertshtengroup.com/api/dailymarketdata/";
 
-    // We fetch OHLC over the last 4 days to ensure we definitely get the previous trading day
+    // We fetch OHLC over the last 7 days to ensure we definitely get the previous trading day
     const now = new Date();
     const today = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
-    const startTs = gmtUnix(today, 0, 0) - (4 * 86400);
+    const startTs = gmtUnix(today, 0, 0) - (7 * 86400); // Expanded to 7 days
     const endTs = gmtUnix(today, 23, 59);
 
     const instrumentsStr = CONTRACTS.map(c => c.code).join(",");

@@ -57,7 +57,7 @@ async function fetchAndCompute() {
     params: {
       instruments,
       interval: "1H",
-      start: eveningTs,
+      start: eveningTs - (7 * 86400), // Fetch 7 days of history to catch previous session across holidays
       end: fetchEnd,
     },
     headers: {
