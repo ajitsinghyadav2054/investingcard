@@ -60,5 +60,11 @@ cron.schedule("0 8 * * 1-5", () => {
     sendWithRetry();
 });
 
+// Hourly Heartbeat to ensure process is alive in logs
+cron.schedule("0 * * * *", () => {
+    console.log(`💓 Heartbeat [${new Date().toISOString()}]: Morning Macro Service is active.`);
+});
+
 // Export for manual testing
 module.exports = { sendConsolidatedMorningBrief };
+

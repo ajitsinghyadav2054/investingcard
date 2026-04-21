@@ -73,8 +73,8 @@ async function fetchDailyLevels() {
 
         // ── 2. Parse Daily Market Data (Settlement) ──
         let settlement = "N/A";
-        // Add a 1000ms delay to avoid hitting the API rate limit easily
-        await new Promise(r => setTimeout(r, 1000));
+        // Add a 1500ms delay to avoid hitting the API rate limit easily
+        await new Promise(r => setTimeout(r, 1500));
         try {
             const dailyRes = await axios.get(dailyApiBase, {
                 params: { qhcode: contract.code, limit: 1 },
