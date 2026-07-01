@@ -8,9 +8,9 @@ const CONTRACTS = [
     { label: "CC (NY Cocoa)", code: "CCK26" },
     { label: "KC (Arabica)", code: "KCK26" },
     { label: "RC (Robusta)", code: "LKCK26" },
-    { label: "CT (Cotton)", code: "CTK26" },
-    { label: "SB (Raw Sugar)", code: "SGK26" },
-    { label: "W (White Sugar)", code: "LSGK26" }
+    { label: "CT (Cotton)", code: "CTN26" },
+    { label: "SB (Raw Sugar)", code: "SGN26" },
+    { label: "W (White Sugar)", code: "LSGQ26" }
 ];
 
 function gmtUnix(date, hour, minute) {
